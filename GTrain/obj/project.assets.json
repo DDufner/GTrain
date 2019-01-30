@@ -12086,11 +12086,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Dominick\\source\\repos\\GTrain\\GTrain\\GTrain.csproj",
+      "projectUniqueName": "C:\\Users\\Dominick\\source\\repos3\\GTrain\\GTrain.csproj",
       "projectName": "GTrain",
-      "projectPath": "C:\\Users\\Dominick\\source\\repos\\GTrain\\GTrain\\GTrain.csproj",
+      "projectPath": "C:\\Users\\Dominick\\source\\repos3\\GTrain\\GTrain.csproj",
       "packagesPath": "C:\\Users\\Dominick\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Dominick\\source\\repos\\GTrain\\GTrain\\obj\\",
+      "outputPath": "C:\\Users\\Dominick\\source\\repos3\\GTrain\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
