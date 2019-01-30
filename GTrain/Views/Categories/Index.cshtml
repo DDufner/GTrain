@@ -1,0 +1,22 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+}
+
+@model IEnumerable<GTrain.Models.Category>
+
+<h1>Categories</h1>
+
+<p><a asp-controller="Category" asp-action="Add">Add Category</a></p>
+
+<ul>
+    @foreach (var category in Model)
+    {
+        <li>
+            <a asp-controller="Menu"
+               asp-action="ViewMenu"
+               asp-route-id="@category.ID">@category.Name</a>
+        </li>
+    }
+
+</ul>

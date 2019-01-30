@@ -7,5 +7,10 @@ namespace GTrain.Models
 {
     public class TopicCategory
     {
+        public int CategoryID { get; set; }
+        public TopicCategory Category { get; set; } //Check on this
+
+        public int TopicID { get; set; }
+        public Topic Topic { get; set; }
     }
 }

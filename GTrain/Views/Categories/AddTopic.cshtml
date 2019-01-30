@@ -1,0 +1,19 @@
+﻿@{
+    ViewData["Title"] = "AddItem";
+}
+@model GTrain.ViewModels.AddCategoryItemViewModel
+<h1>Add Topic</h1>
+
+<form asp-controller="Category" asp-action="AddTopic" method="post">
+
+    <div class="form-group">
+        <label asp-for="TopicID"></label> <!--'MenuID' was 'CheeseID' -->
+        <select asp-for="TopicID" asp-items="Model.Cheeses"></select>
+        <span asp-validation-for="TopicID"></span>
+    </div>
+
+    <input type="hidden" name="CategoryID" value="@Model.Category.ID" />
+
+    <input type="submit" value="Add Item" />
+
+</form>

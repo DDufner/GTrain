@@ -1,0 +1,26 @@
+﻿
+@{
+    ViewData["Title"] = "ViewCategory";
+}
+
+<h1>ViewCategory</h1>
+
+
+@model GTrain.ViewModels.ViewCategoryViewModel
+
+@{
+    ViewBag.Title = "Model.Category.Name";
+}
+
+<ul>
+    @foreach (var topicCategory in Model.Items)
+    {
+        <li>@topicCategory</li>
+    }
+</ul>
+
+@if (Model.Items.Count == 0)
+{
+    <p><i>No category items</i></p>
+}
+<p><a asp-controller="Category" asp-action="AddItem" asp-route-id="@Model.Category.ID">Add Topic</a></p>
