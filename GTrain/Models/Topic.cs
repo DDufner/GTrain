@@ -9,7 +9,7 @@ namespace GTrain.Models
     {
         public string Name { get; set; }
         public string Description { get; set; }
-        public TrainingCategory Category { get; set; }
+        //public TrainingCategory Category { get; set; }
         public int CategoryID { get; set; }
         public int ID { get; set; }
 

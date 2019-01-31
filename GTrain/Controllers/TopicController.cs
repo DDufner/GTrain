@@ -12,7 +12,7 @@ namespace GTrain.Controllers
 {
     public class TopicController : Controller
     {
-        private TopicDbContext context;
+        /*private TopicDbContext context;
 
         public TopicController(TopicDbContext dbContext)
         {
@@ -74,6 +74,6 @@ namespace GTrain.Controllers
             context.SaveChanges();
 
             return Redirect("/");
-        }
+        }*/
     }
 }

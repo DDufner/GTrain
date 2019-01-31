@@ -11,94 +11,49 @@ using Microsoft.EntityFrameworkCore;
 namespace GTrain.Controllers
 {
     public class CategoryController : Controller
-    {
-        private readonly TopicDbContext context;
+   {
+        // GET: /<controller>/
+        /*public IActionResult Index()
+        {
+            IList<CheeseCategory> categories = context.Categories.ToList();
+            return View(categories);
+        }
 
-        public CategoryController(TopicDbContext dbContext)
+        private readonly CheeseDbContext context;
+
+        public CategoryController(CheeseDbContext dbContext)
         {
             context = dbContext;
         }
 
-        public IActionResult Index()
+       public IActionResult Add()
         {
-            List<Category> categories = context.Categories.ToList();
-            return View(categories);
-        }
-
-        public IActionResult Add()
-        {
-            AddCategoryItemViewModel addCategoryViewModel = new AddCategoryItemViewModel();
-            return View(addCategoryViewModel);
+           AddCategoryViewModel addCategoryViewModel = new AddCategoryViewModel();
+           return View(addCategoryViewModel);
+           //Create an Add action within CategoryController that 
+           //creates an AddCategoryViewModel and passes it into the view.
         }
 
         [HttpPost]
-        public IActionResult Add(AddCategoryItemViewModel addCategoryViewModel)
+        public IActionResult Add(AddCategoryViewModel addCategoryViewModel)
         {
             if (ModelState.IsValid)
             {
-                Category newCategory = new Category
+                CheeseCategory newCheeseCategory = new CheeseCategory
                 {
                     Name = addCategoryViewModel.Name
+                    //ID = addCategoryViewModel.CategoryID, 
+                    
                 };
 
-                context.Menus.Add(newCategory);
-                context.SaveChanges();
-
-                return Redirect("/Category");
-                //return Redirect("/Menu/ViewMenu/" + newMenu.ID);
-            }
-
-            return View(addCategoryViewModel);
-        }
-        public IActionResult ViewCategory(int id, ViewCategoryViewModel viewMenuViewModel)
-        {
-            List<TopicCategory> items = context
-                .TopicCategory
-                .Include(item => item.Topic)
-                .Where(cm => cm.CategoryID == id)
-                .ToList();
-            Category category = context.Categories.Where(m => m.ID == id).Single();
-
-
-            viewCategoryViewModel.Items = items;
-            viewCategoryViewModel.Category = category;
-            return View(viewCategoryViewModel);
-        }
-        public IActionResult AddItem(int id)
-        {
-            Category category = context.Categories.Single(m => m.ID == id);
-            List<Topic> Topics = context.Topics.ToList();
-            return View(new AddCategoryItemViewModel(category, topics));
-        }
-        [HttpPost]
-        public IActionResult AddItem(AddCategoryItemViewModel addCategoryItemViewModel)
-        {
-            if (ModelState.IsValid)
-            {
-                var cheeseID = addCategoryItemViewModel.TopicID;
-                var menuID = addCategoryItemViewModel.CategoryID;
-
-                IList<TopicCategory> existingItems = context.TopicCategories
-                    .Where(cm => cm.TopicID == topicID)
-                    .Where(cm => cm.CategoryID == categoryID).ToList();
-
-                if (existingItems.Count == 0)
-                {
-                    TopicCategory menuItem = new TopicCategory
-                    {
-                        //CheeseID = addMenuItemViewModel.CheeseID,
-                        Topic = context.Topics.Single(c => c.ID == topicID),
-                        //MenuID = addMenuItemViewModel.MenuID,
-                        Category = context.Categories.Single(m => m.ID == categoryID)
-                    };
-                    context.TopicCategory.Add(categoryItem);
+                context.Categories.Add(newCheeseCategory);
                     context.SaveChanges();
+                return Redirect("/Category");
+                 }
+                
+            return View(addCategoryViewModel);
+            
 
-                };
-
-                return Redirect(string.Format($"/Category/ViewCategory/{categoryID}", addCategoryItemViewModel.Menu));
-            }
-            return View(addCategoryItemViewModel);
-        }
+        }*/
     }
 }
