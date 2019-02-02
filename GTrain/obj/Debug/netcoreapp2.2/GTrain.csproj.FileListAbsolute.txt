@@ -7,10 +7,6 @@ C:\Users\Dominick\source\repos3\GTrain\obj\Debug\netcoreapp2.2\GTrain.AssemblyIn
 C:\Users\Dominick\source\repos3\GTrain\obj\Debug\netcoreapp2.2\GTrain.TagHelpers.input.cache
 C:\Users\Dominick\source\repos3\GTrain\obj\Debug\netcoreapp2.2\GTrain.TagHelpers.output.cache
 C:\Users\Dominick\source\repos3\GTrain\obj\Debug\netcoreapp2.2\GTrain.RazorCoreGenerate.cache
-C:\Users\Dominick\source\repos3\GTrain\obj\Debug\netcoreapp2.2\Razor\Views\Categories\Add.g.cshtml.cs
-C:\Users\Dominick\source\repos3\GTrain\obj\Debug\netcoreapp2.2\Razor\Views\Categories\AddTopic.g.cshtml.cs
-C:\Users\Dominick\source\repos3\GTrain\obj\Debug\netcoreapp2.2\Razor\Views\Categories\Index.g.cshtml.cs
-C:\Users\Dominick\source\repos3\GTrain\obj\Debug\netcoreapp2.2\Razor\Views\Categories\ViewCategory.g.cshtml.cs
 C:\Users\Dominick\source\repos3\GTrain\obj\Debug\netcoreapp2.2\Razor\Views\Home\About.g.cshtml.cs
 C:\Users\Dominick\source\repos3\GTrain\obj\Debug\netcoreapp2.2\Razor\Views\Home\Index.g.cshtml.cs
 C:\Users\Dominick\source\repos3\GTrain\obj\Debug\netcoreapp2.2\Razor\Views\Home\Privacy.g.cshtml.cs
@@ -18,9 +14,6 @@ C:\Users\Dominick\source\repos3\GTrain\obj\Debug\netcoreapp2.2\Razor\Views\Share
 C:\Users\Dominick\source\repos3\GTrain\obj\Debug\netcoreapp2.2\Razor\Views\Shared\_CookieConsentPartial.g.cshtml.cs
 C:\Users\Dominick\source\repos3\GTrain\obj\Debug\netcoreapp2.2\Razor\Views\Shared\_Layout.g.cshtml.cs
 C:\Users\Dominick\source\repos3\GTrain\obj\Debug\netcoreapp2.2\Razor\Views\Shared\_ValidationScriptsPartial.g.cshtml.cs
-C:\Users\Dominick\source\repos3\GTrain\obj\Debug\netcoreapp2.2\Razor\Views\Topics\Add.g.cshtml.cs
-C:\Users\Dominick\source\repos3\GTrain\obj\Debug\netcoreapp2.2\Razor\Views\Topics\Index.g.cshtml.cs
-C:\Users\Dominick\source\repos3\GTrain\obj\Debug\netcoreapp2.2\Razor\Views\Topics\Remove.g.cshtml.cs
 C:\Users\Dominick\source\repos3\GTrain\obj\Debug\netcoreapp2.2\Razor\Views\_ViewImports.g.cshtml.cs
 C:\Users\Dominick\source\repos3\GTrain\obj\Debug\netcoreapp2.2\Razor\Views\_ViewStart.g.cshtml.cs
 C:\Users\Dominick\source\repos3\GTrain\obj\Debug\netcoreapp2.2\GTrain.RazorTargetAssemblyInfo.cache
@@ -36,3 +29,11 @@ C:\Users\Dominick\source\repos3\GTrain\bin\Debug\netcoreapp2.2\GTrain.Views.dll
 C:\Users\Dominick\source\repos3\GTrain\bin\Debug\netcoreapp2.2\GTrain.Views.pdb
 C:\Users\Dominick\source\repos3\GTrain\obj\Debug\netcoreapp2.2\GTrain.Views.pdb
 C:\Users\Dominick\source\repos3\GTrain\obj\Debug\netcoreapp2.2\GTrain.csproj.CopyComplete
+C:\Users\Dominick\source\repos3\GTrain\obj\Debug\netcoreapp2.2\Razor\Views\Category\Add.g.cshtml.cs
+C:\Users\Dominick\source\repos3\GTrain\obj\Debug\netcoreapp2.2\Razor\Views\Category\AddTopic.g.cshtml.cs
+C:\Users\Dominick\source\repos3\GTrain\obj\Debug\netcoreapp2.2\Razor\Views\Category\Index.g.cshtml.cs
+C:\Users\Dominick\source\repos3\GTrain\obj\Debug\netcoreapp2.2\Razor\Views\Category\ViewCategory.g.cshtml.cs
+C:\Users\Dominick\source\repos3\GTrain\obj\Debug\netcoreapp2.2\Razor\Views\Topic\Add.g.cshtml.cs
+C:\Users\Dominick\source\repos3\GTrain\obj\Debug\netcoreapp2.2\Razor\Views\Topic\Index.g.cshtml.cs
+C:\Users\Dominick\source\repos3\GTrain\obj\Debug\netcoreapp2.2\Razor\Views\Topic\Remove.g.cshtml.cs
+C:\Users\Dominick\source\repos3\GTrain\obj\Debug\netcoreapp2.2\Razor\Views\Topic\Test.g.cshtml.cs

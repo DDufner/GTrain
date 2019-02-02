@@ -8,7 +8,7 @@ namespace GTrain.ViewModels
 {
     public class ViewCategoryViewModel
     {
-        public IList<TopicCategory> Items { get; set; }
+        public IList<TopicCategory> Topics { get; set; }
         public Category Category { get; set; }
     }
 }

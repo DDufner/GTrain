@@ -3,7 +3,7 @@
     ViewData["Title"] = "ViewCategory";
 }
 
-<h1>ViewCategory</h1>
+<h1>View Category</h1>
 
 
 @model GTrain.ViewModels.ViewCategoryViewModel
@@ -13,13 +13,13 @@
 }
 
 <ul>
-    @foreach (var topicCategory in Model.Items)
+    @foreach (var topicCategory in Model.Topics)
     {
         <li>@topicCategory</li>
     }
 </ul>
 
-@if (Model.Items.Count == 0)
+@if (Model.Topics.Count == 0)
 {
     <p><i>No category items</i></p>
 }

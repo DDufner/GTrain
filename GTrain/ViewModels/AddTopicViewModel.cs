@@ -17,21 +17,22 @@ namespace GTrain.ViewModels
         [Display(Name = "Topic")]
         public string Name { get; set; }
         public string Description { get; set; }
-        public int CategoryID { get; set; }
+        //public int CategoryID { get; set; }
 
-        public List<SelectListItem> Categories { get; set; }
+        //public List<SelectListItem> Topics { get; set; }
 
         public AddTopicViewModel()
         {
         }
-
-        /*public AddTopicViewModel(IEnumerable<TrainingCategory> categories)
+        /*
+        public AddTopicViewModel(IEnumerable<TrainingCategory> categories)
         {
             Categories = new List<SelectListItem>();
             foreach (var category in categories)
             {
                 Categories.Add(new SelectListItem { Value = category.ID.ToString(), Text = category.Name });
             }
-        }*/
+        }
+        */
     }
 }

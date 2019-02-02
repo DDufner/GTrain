@@ -6,29 +6,36 @@ using Microsoft.AspNetCore.Mvc;
 using GTrain.Models;
 using GTrain.ViewModels;
 using Microsoft.EntityFrameworkCore;
-//using GTrain.Data; 
+using GTrain.Data; 
 
 namespace GTrain.Controllers
 {
     public class TopicController : Controller
     {
-        /*private TopicDbContext context;
+        private TrainingDbContext context;
 
-        public TopicController(TopicDbContext dbContext)
+        public TopicController(TrainingDbContext dbContext)
         {
             context = dbContext;
         }
-
+        
         public IActionResult Index()
         {
-            IList<Topic> topics = context.Topics.Include(context => c.Category).ToList(); //WARNING: check if catetory 
+            //IList<Topic> topics = context.Topics.Include(context => c.Category).ToList(); //WARNING: check if catetory 
             //is correct ref, since not using category as used in CheeseCategory
-            return View(topics);
+            
+            return View();
         }
 
+
+        public IActionResult Test()
+        {
+            return View();
+        }
+        
         public IActionResult Add()
         {
-            AddTopicViewModel addTopicViewModel = new AddTopicViewModel(context.Categories.ToList());
+            AddTopicViewModel addTopicViewModel = new AddTopicViewModel(context.Topics.ToList());
             return View(addTopicViewModel);
             //WARNING: check if catetory 
             //is correct ref, since not using category as used in CheeseCategory
@@ -63,9 +70,9 @@ namespace GTrain.Controllers
         }
 
         [HttpPost]
-        public IActionResult Remove(int[] cheeseIds)
+        public IActionResult Remove(int[] topicIds)
         {
-            foreach (int cheeseId in cheeseIds)
+            foreach (int topicId in topicIds)
             {
                 Topic theTopic = context.Topics.Single(c => c.ID == topicId);
                 context.Topics.Remove(theTopic);
@@ -74,6 +81,6 @@ namespace GTrain.Controllers
             context.SaveChanges();
 
             return Redirect("/");
-        }*/
+        }
     }
 }

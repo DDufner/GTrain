@@ -13,7 +13,7 @@ namespace GTrain.Models
         public int CategoryID { get; set; }
         public int ID { get; set; }
 
-        //public List<CheeseMenue> CheeseMenus {get; set;}
+        public List<TopicCategory> TopicCategories {get; set;}
 
     }
 }

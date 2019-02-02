@@ -1,4 +1,4 @@
-﻿//using GTrain.Data;
+﻿using GTrain.Data;
 using GTrain.Models;
 using GTrain.ViewModels;
 using System;
@@ -13,15 +13,16 @@ namespace GTrain.Controllers
     public class CategoryController : Controller
    {
         // GET: /<controller>/
-        /*public IActionResult Index()
+        public IActionResult Index()
         {
-            IList<CheeseCategory> categories = context.Categories.ToList();
-            return View(categories);
+            return View();
+            //IList<CheeseCategory> categories = context.Categories.ToList();
+            //return View(categories);
         }
+        
+        private readonly TrainingDbContext context;
 
-        private readonly CheeseDbContext context;
-
-        public CategoryController(CheeseDbContext dbContext)
+        public CategoryController(TrainingDbContext dbContext)
         {
             context = dbContext;
         }
@@ -33,7 +34,7 @@ namespace GTrain.Controllers
            //Create an Add action within CategoryController that 
            //creates an AddCategoryViewModel and passes it into the view.
         }
-
+        /*
         [HttpPost]
         public IActionResult Add(AddCategoryViewModel addCategoryViewModel)
         {
