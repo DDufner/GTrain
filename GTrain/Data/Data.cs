@@ -15,11 +15,11 @@ namespace GTrain.Data
         }
         
 
-        protected override void OnModelCreating(ModelBuilder modelBuilder)
+       /* protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<TopicCategory>()
                 .HasKey(c => new { c.TopicID, c.CategoryID });
-        }
+        }*/
 
     }
 }
