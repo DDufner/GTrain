@@ -35,7 +35,7 @@ namespace GTrain.Controllers
         
         public IActionResult Add()
         {
-            AddTopicViewModel addTopicViewModel = new AddTopicViewModel(context.Topics.ToList());
+            AddTopicViewModel addTopicViewModel = new AddTopicViewModel();
             return View(addTopicViewModel);
             //WARNING: check if catetory 
             //is correct ref, since not using category as used in CheeseCategory
