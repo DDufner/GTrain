@@ -30,10 +30,12 @@ C:\Users\Dominick\source\repos3\GTrain\bin\Debug\netcoreapp2.2\GTrain.Views.pdb
 C:\Users\Dominick\source\repos3\GTrain\obj\Debug\netcoreapp2.2\GTrain.Views.pdb
 C:\Users\Dominick\source\repos3\GTrain\obj\Debug\netcoreapp2.2\GTrain.csproj.CopyComplete
 C:\Users\Dominick\source\repos3\GTrain\obj\Debug\netcoreapp2.2\Razor\Views\Category\Add.g.cshtml.cs
-C:\Users\Dominick\source\repos3\GTrain\obj\Debug\netcoreapp2.2\Razor\Views\Category\AddTopic.g.cshtml.cs
 C:\Users\Dominick\source\repos3\GTrain\obj\Debug\netcoreapp2.2\Razor\Views\Category\Index.g.cshtml.cs
 C:\Users\Dominick\source\repos3\GTrain\obj\Debug\netcoreapp2.2\Razor\Views\Category\ViewCategory.g.cshtml.cs
 C:\Users\Dominick\source\repos3\GTrain\obj\Debug\netcoreapp2.2\Razor\Views\Topic\Add.g.cshtml.cs
 C:\Users\Dominick\source\repos3\GTrain\obj\Debug\netcoreapp2.2\Razor\Views\Topic\Index.g.cshtml.cs
 C:\Users\Dominick\source\repos3\GTrain\obj\Debug\netcoreapp2.2\Razor\Views\Topic\Remove.g.cshtml.cs
 C:\Users\Dominick\source\repos3\GTrain\obj\Debug\netcoreapp2.2\Razor\Views\Topic\Test.g.cshtml.cs
+C:\Users\Dominick\source\repos3\GTrain\obj\Debug\netcoreapp2.2\Razor\Views\Login\Admin.g.cshtml.cs
+C:\Users\Dominick\source\repos3\GTrain\obj\Debug\netcoreapp2.2\Razor\Views\Login\Index.g.cshtml.cs
+C:\Users\Dominick\source\repos3\GTrain\obj\Debug\netcoreapp2.2\Razor\Views\Topic\AddTopic.g.cshtml.cs

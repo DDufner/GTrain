@@ -29,6 +29,7 @@ namespace GTrain.ViewModels
                 });
             }
             Category = category;
+
         }
     }
 }

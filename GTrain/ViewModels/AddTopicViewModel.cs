@@ -7,32 +7,38 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 
-// For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
 namespace GTrain.ViewModels
 {
     public class AddTopicViewModel
     {
+        private readonly List<Topic> list;
+
         [Required]
         [Display(Name = "Topic")]
         public string Name { get; set; }
         public string Description { get; set; }
-        //public int CategoryID { get; set; }
+        public int TopicID { get; set; }
 
-        //public List<SelectListItem> Topics { get; set; }
+        public List<SelectListItem> Topics { get; set; }
 
         public AddTopicViewModel()
         {
         }
-        /*
-        public AddTopicViewModel(IEnumerable<TrainingCategory> categories)
+
+        public AddTopicViewModel(List<Topic> list)
         {
-            Categories = new List<SelectListItem>();
-            foreach (var category in categories)
-            {
-                Categories.Add(new SelectListItem { Value = category.ID.ToString(), Text = category.Name });
-            }
+            this.list = list;
         }
-        */
+        /*
+public AddTopicViewModel(IEnumerable<TrainingCategory> categories)
+{
+   Categories = new List<SelectListItem>();
+   foreach (var category in categories)
+   {
+       Categories.Add(new SelectListItem { Value = category.ID.ToString(), Text = category.Name });
+   }
+}
+*/
     }
 }

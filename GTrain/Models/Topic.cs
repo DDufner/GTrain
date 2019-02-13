@@ -7,13 +7,10 @@ namespace GTrain.Models
 {
     public class Topic
     {
-        public string Name { get; set; }
-        public string Description { get; set; }
-        //public TrainingCategory Category { get; set; }
-        public int CategoryID { get; set; }
-        public int ID { get; set; }
+        public string Name { get; set; } 
+        public string Description { get; set; } 
+        public int ID { get; set; } 
 
-        public List<TopicCategory> TopicCategories {get; set;}
-
+        public List<TopicCategory> TopicCategories {get; set;} 
     }
 }

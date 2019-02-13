@@ -6,7 +6,6 @@ namespace GTrain.Data
     public class TrainingDbContext : DbContext
     {
         public DbSet<Topic> Topics { get; set; }
-        //public DbSet<CheeseCategory> Categories { get; set; }
         public DbSet<Category> Categories { get; set; }
         public DbSet<TopicCategory> TopicCategories { get; set; }
 

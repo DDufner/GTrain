@@ -1,0 +1,36 @@
+﻿@model GTrain.ViewModels.LoginViewModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div class="text-center">
+    <h1 class="display-4"><b>User Login</b></h1>
+    <h2>Please select which Login you will use depending on your role. </h2>
+</div>
+<form asp-controller="Login" asp-action="Index" method="get">
+
+    <div class="text-center">
+        <h1>Administator Login</h1>
+        <p>
+            <b><u>Administrators</u></b> have the ability to create, modify, and assign training
+            topics and categories.
+        </p>
+    </div>
+</form>
+<!--<form asp-controller="Login" asp-action="Trainer" method="post">-->
+
+<div class="text-center">
+    <h1>Trainer Login</h1>
+    <p>
+        <b><u>Trainers</u></b> are responsible for implementing the training for topics and
+        categories while working directly with a Trainee.
+    </p>
+</div>
+<!---</form>-->
+<!-- <form asp-controller="Login" asp-action="Trainee" method="post">-->
+<div class="text-center">
+    <h1>Trainee Login</h1>
+    <p><b><u>Trainees</u></b> are staff who are being trained on topics and categories by a Trainer.</p>
+</div>
+<!---</form>-->

@@ -13,7 +13,7 @@ namespace GTrain.Controllers
     public class TopicController : Controller
     {
         private TrainingDbContext context;
-
+        
         public TopicController(TrainingDbContext dbContext)
         {
             context = dbContext;
@@ -35,7 +35,8 @@ namespace GTrain.Controllers
         
         public IActionResult Add()
         {
-            AddTopicViewModel addTopicViewModel = new AddTopicViewModel(context.Topics.ToList());
+            AddTopicViewModel addTopicViewModel = new AddTopicViewModel();
+            //AddTopicViewModel addTopicViewModel = new AddTopicViewModel(context.Topics.ToList());
             return View(addTopicViewModel);
             //WARNING: check if catetory 
             //is correct ref, since not using category as used in CheeseCategory
@@ -45,14 +46,13 @@ namespace GTrain.Controllers
         {
             if (ModelState.IsValid)
             {
-                //CheeseCategory newCheeseCategory =
-                //context.Categories.Single(c => c.ID == addCheeseViewModel.CategoryID);
+                Topic newTopic =
+                context.Topics.Single(c => c.ID == addTopicViewModel.TopicID);
                 // Add the new cheese to my existing cheeses
-                Topic newTopic = new Topic
+                Topic TopicID = new Topic
                 {
                     Name = addTopicViewModel.Name,
                     Description = addTopicViewModel.Description,
-                    //Category = newCheeseCategory //was 'addCheeseViewModel.CategoryID' 
                 };
                 context.Topics.Add(newTopic);
                 context.SaveChanges();

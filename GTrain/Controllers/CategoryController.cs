@@ -15,7 +15,8 @@ namespace GTrain.Controllers
         // GET: /<controller>/
         public IActionResult Index()
         {
-            return View();
+            List<Category> categories = context.Categories.ToList();
+            return View(categories);
             //IList<CheeseCategory> categories = context.Categories.ToList();
             //return View(categories);
         }
@@ -34,20 +35,20 @@ namespace GTrain.Controllers
            //Create an Add action within CategoryController that 
            //creates an AddCategoryViewModel and passes it into the view.
         }
-        /*
+        
         [HttpPost]
         public IActionResult Add(AddCategoryViewModel addCategoryViewModel)
         {
             if (ModelState.IsValid)
             {
-                CheeseCategory newCheeseCategory = new CheeseCategory
+                Category newCategory = new Category
                 {
-                    Name = addCategoryViewModel.Name
-                    //ID = addCategoryViewModel.CategoryID, 
+                    Name = addCategoryViewModel.Name,
+                    ID = addCategoryViewModel.ID 
                     
                 };
 
-                context.Categories.Add(newCheeseCategory);
+                context.Categories.Add(newCategory);
                     context.SaveChanges();
                 return Redirect("/Category");
                  }
@@ -55,6 +56,6 @@ namespace GTrain.Controllers
             return View(addCategoryViewModel);
             
 
-        }*/
+        }
     }
 }
