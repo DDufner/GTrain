@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace GTrain.Migrations
 {
-    public partial class Topic : Migration
+    public partial class GTrain : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -24,14 +24,14 @@ namespace GTrain.Migrations
                 name: "Topics",
                 columns: table => new
                 {
-                    ID = table.Column<int>(nullable: false)
+                    TopicID = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
                     Name = table.Column<string>(nullable: true),
                     Description = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Topics", x => x.ID);
+                    table.PrimaryKey("PK_Topics", x => x.TopicID);
                 });
 
             migrationBuilder.CreateTable(
@@ -56,7 +56,7 @@ namespace GTrain.Migrations
                         name: "FK_TopicCategories_Topics_TopicID",
                         column: x => x.TopicID,
                         principalTable: "Topics",
-                        principalColumn: "ID",
+                        principalColumn: "TopicID",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
                         name: "FK_TopicCategories_TopicCategories_CategoryTopicID_CategoryID1",

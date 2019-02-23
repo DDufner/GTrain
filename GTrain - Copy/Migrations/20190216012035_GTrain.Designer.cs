@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace GTrain.Migrations
 {
     [DbContext(typeof(TrainingDbContext))]
-    [Migration("20190211032200_Topics")]
-    partial class Topics
+    [Migration("20190216012035_GTrain")]
+    partial class GTrain
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -36,7 +36,7 @@ namespace GTrain.Migrations
 
             modelBuilder.Entity("GTrain.Models.Topic", b =>
                 {
-                    b.Property<int>("ID")
+                    b.Property<int>("TopicID")
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
@@ -44,7 +44,7 @@ namespace GTrain.Migrations
 
                     b.Property<string>("Name");
 
-                    b.HasKey("ID");
+                    b.HasKey("TopicID");
 
                     b.ToTable("Topics");
                 });

@@ -32,8 +32,7 @@ namespace GTrain.Controllers
         {
            AddCategoryViewModel addCategoryViewModel = new AddCategoryViewModel();
            return View(addCategoryViewModel);
-           //Create an Add action within CategoryController that 
-           //creates an AddCategoryViewModel and passes it into the view.
+
         }
         
         [HttpPost]
@@ -56,6 +55,12 @@ namespace GTrain.Controllers
             return View(addCategoryViewModel);
             
 
+        }
+        public IActionResult Remove()
+        {
+            ViewBag.title = "Remove Category";
+            ViewBag.topics = context.Categories.ToList();
+            return View();
         }
     }
 }

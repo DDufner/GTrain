@@ -18,13 +18,15 @@ namespace GTrain.Controllers
         {
             context = dbContext;
         }
-        
+
         public IActionResult Index()
         {
+
+            List<Topic> topics = context.Topics.ToList();
+            ViewBag.topics = context.Topics.ToList();
             //IList<Topic> topics = context.Topics.Include(context => c.Category).ToList(); //WARNING: check if catetory 
-            //is correct ref, since not using category as used in CheeseCategory
-            
-            return View();
+
+            return View(topics);
         }
 
 
@@ -38,21 +40,18 @@ namespace GTrain.Controllers
             AddTopicViewModel addTopicViewModel = new AddTopicViewModel();
             //AddTopicViewModel addTopicViewModel = new AddTopicViewModel(context.Topics.ToList());
             return View(addTopicViewModel);
-            //WARNING: check if catetory 
-            //is correct ref, since not using category as used in CheeseCategory
+
         }
         [HttpPost]
         public IActionResult Add(AddTopicViewModel addTopicViewModel)
         {
             if (ModelState.IsValid)
             {
-                Topic newTopic =
-                context.Topics.Single(c => c.ID == addTopicViewModel.TopicID);
-                // Add the new cheese to my existing cheeses
-                Topic TopicID = new Topic
+                Topic newTopic = new Topic                
                 {
                     Name = addTopicViewModel.Name,
                     Description = addTopicViewModel.Description,
+                    ID = addTopicViewModel.ID
                 };
                 context.Topics.Add(newTopic);
                 context.SaveChanges();

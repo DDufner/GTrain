@@ -8,9 +8,10 @@ namespace GTrain.Models
     public class Login
     {
         public string UserName { get; set; }
-        public int UserID { get; set; }
+        public int ID { get; set; }
+        public string Email { get; set; }
         public string Password { get; set; }
-        //will need password hashing for security 
+        public string ConfirmPassword { get; set; }
+        //will need password hashing for security???
     }
 }
-

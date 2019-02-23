@@ -8,6 +8,7 @@ namespace GTrain.Data
         public DbSet<Topic> Topics { get; set; }
         public DbSet<Category> Categories { get; set; }
         public DbSet<TopicCategory> TopicCategories { get; set; }
+        public DbSet<Login> Logins { get; set; }
 
         public TrainingDbContext(DbContextOptions<TrainingDbContext> options) : base(options)
         {
@@ -17,7 +18,7 @@ namespace GTrain.Data
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<TopicCategory>()
-                .HasKey(c => new { c.TopicID, c.CategoryID });
+                .HasKey(c => new { c.ID, c.CategoryID });
         }
 
     }

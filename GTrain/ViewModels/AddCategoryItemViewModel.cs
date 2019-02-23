@@ -12,10 +12,11 @@ namespace GTrain.ViewModels
         public Category Category { get; set; }
         public List<SelectListItem> Topics { get; set; }
         public int CatgoryID { get; set; }
-        public int TopicID { get; set; }
+        public int ID { get; set; }
         public Topic Topic { get; set; }
 
         public AddCategoryItemViewModel() { }
+
         public AddCategoryItemViewModel(Category category, IEnumerable<Topic> topics)
         {
             Topics = new List<SelectListItem>();
