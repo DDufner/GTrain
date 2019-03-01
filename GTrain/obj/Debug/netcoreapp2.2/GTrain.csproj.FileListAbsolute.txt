@@ -43,3 +43,4 @@ C:\Users\Dominick\source\repos3\GTrain\obj\Debug\netcoreapp2.2\Razor\Views\Login
 C:\Users\Dominick\source\repos3\GTrain\obj\Debug\netcoreapp2.2\Razor\Views\Login\Trainee.g.cshtml.cs
 C:\Users\Dominick\source\repos3\GTrain\obj\Debug\netcoreapp2.2\Razor\Views\Category\Remove.g.cshtml.cs
 C:\Users\Dominick\source\repos3\GTrain\obj\Debug\netcoreapp2.2\Razor\Views\Login\Register.g.cshtml.cs
+C:\Users\Dominick\source\repos3\GTrain\obj\Debug\netcoreapp2.2\Razor\Views\Category\AddItem.g.cshtml.cs

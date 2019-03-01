@@ -1,0 +1,15 @@
+﻿
+@model GTrain.ViewModels.AddCategoryItemViewModel
+<<form asp-controller="Category" asp-action="AddItem" method="post">
+
+<div class="form-group">
+    <label asp-for="ID"></label> <!--'MenuID' was 'CheeseID'-->
+<select asp-for="ID" asp-items="Model.Topics"></select>
+<span asp-validation-for="ID"></span>
+</div>
+
+<input type="hidden" name="CategoryID" value="ATModel.Category.ID" />
+
+<input type="submit" value="Add Item" />
+
+</form>

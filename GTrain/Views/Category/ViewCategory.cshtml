@@ -1,10 +1,5 @@
 ﻿
-@{
-    ViewData["Title"] = "ViewCategory";
-}
-
 <h1>View Category</h1>
-
 
 @model GTrain.ViewModels.ViewCategoryViewModel
 
@@ -15,12 +10,12 @@
 <ul>
     @foreach (var topicCategory in Model.Topics)
     {
-        <li>@topicCategory</li>
+        <li>@topicCategory.Topic.Name</li>
     }
 </ul>
 
 @if (Model.Topics.Count == 0)
 {
-    <p><i>No category items</i></p>
+    <p><i>No category topics yet. </i></p>
 }
-<p><a asp-controller="Category" asp-action="AddItem" asp-route-id="@Model.Category.ID">Add Topic</a></p>
+    <p><<a asp-controller="Category" asp-action="AddItem" asp-route-id="@Model.Category.ID">Add Topic</a></p>

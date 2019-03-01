@@ -7,6 +7,7 @@ namespace GTrain.Models
 {
     public class Login
     {
+        //Add user type declaration, i.e. 'admin', 'trainer', 'trainee'
         public string UserName { get; set; }
         public int ID { get; set; }
         public string Email { get; set; }

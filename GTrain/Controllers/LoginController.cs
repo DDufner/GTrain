@@ -12,12 +12,13 @@ namespace GTrain.Controllers
 {
     public class LoginController : Controller
     {
-        /*
+        
         [HttpGet]
         public IActionResult Register()
         {
         return View();
         }
+        /*
         [HttpPost]
         public IActionResult Register(LoginViewModel loginViewModel)
         {
@@ -36,6 +37,7 @@ namespace GTrain.Controllers
             return View(); 
         }
         */
+
         public IActionResult Index()
         {
             return View();

@@ -3,26 +3,37 @@
 @{
     ViewData["Title"] = "Register";
 }
-<h3>Registration</h3>
+<h1>Account Registration</h1>
 
 <form method="post" asp-controller="Login" asp-action="Register">
     <div asp-validation-summary="All"></div>
+        <div>
+            <b>Please Select Account Type</b> <select id="" name="">
+
+                <option value="">Administrator</option>
+
+                <option value="0">Trainer</option>
+
+                <option value="1">Trainee</option>
+            </select>
+        </div>    
+    <br />
     <div>
-        <label asp-for="UserName"></label>
+        <b><label asp-for="UserName"></label></b>
         <input asp-for="UserName" />
     </div>
     <div>
-        <label asp-for="Email"></label>
+        <b><label asp-for="Email"></label></b>
         <input asp-for="Email" />
         <span asp-validation-for="Email"></span>
     </div>
     <div>
-        <label asp-for="Password"></label>
+        <b><label asp-for="Password"></label></b>
         <input asp-for="Password" />
         <span asp-validation-for="Password"></span>
     </div>
     <div>
-        <label asp-for="ConfirmPassword"></label>
+        <b><label asp-for="ConfirmPassword"></label></b>
         <input asp-for="ConfirmPassword" />
         <span asp-validation-for="ConfirmPassword"></span>
     </div>

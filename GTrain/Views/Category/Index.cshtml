@@ -13,9 +13,11 @@
 <ul>
     @foreach (var category in Model)
     {
-        
+
         <li>
-            <a asp-route-id="@category.ID">@category.Name</a>
+            <a asp-controller="Category"
+                asp-action="ViewCategory"
+                asp-route-id="@category.ID">@category.Name</a>
         </li>
     }
 

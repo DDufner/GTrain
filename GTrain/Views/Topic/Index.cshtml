@@ -5,6 +5,10 @@
 
 <h1>@ViewBag.title</h1>
 
+
+<p><a asp-controller="Topic" asp-action="Add">Add Topic</a></p>
+<p><a asp-controller="Topic" asp-action="Remove">Remove Topic</a></p>
+
 <table class="table">
 
     <tr>
@@ -20,12 +24,9 @@
         </tr>
     }
 </table>
-    @if (Model.Count == 0)
-    {
-        <p>No topics have been created yet!</p>
-    }
+@if (Model.Count == 0)
+{
+    <p>No topics have been created yet!</p>
+}
 
 
-
-<p><a asp-controller="Topic" asp-action="Add">Add Topic</a></p>
-<p><a asp-controller="Topic" asp-action="Remove">Remove Topic</a></p>
