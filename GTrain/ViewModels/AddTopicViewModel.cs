@@ -18,14 +18,13 @@ namespace GTrain.ViewModels
         [Display(Name = "Topic")]
         public string Name { get; set; }
         public string Description { get; set; }
-        public int ID { get; set; }
+        //public int ID { get; set; }
 
         //public List<SelectListItem> Topics { get; set; }
 
         public AddTopicViewModel()
         {
         }
-        //Check over this.  Looks like it might as list of topics to topic 
         public AddTopicViewModel(List<Topic> list)
         {
             this.list = list;

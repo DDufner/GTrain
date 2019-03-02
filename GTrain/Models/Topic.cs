@@ -11,7 +11,7 @@ namespace GTrain.Models
         public string Description { get; set; } 
         public int ID { get; set; }
 
-        public List<TopicCategory> TopicCategories { get; set; } 
+        public IList<TopicCategory> TopicCategories { get; set; } 
         //public IList<TopicCategory> TopicCategories {get; set;} = new List<TopicCategory>();
     }
 }

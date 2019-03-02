@@ -1,6 +1,8 @@
 ﻿
 @model GTrain.ViewModels.AddCategoryItemViewModel
-<<form asp-controller="Category" asp-action="AddItem" method="post">
+<form asp-controller="Category" asp-action="AddItem" method="post">
+
+<h1>Add a Topic to a Category</h1>
 
 <div class="form-group">
     <label asp-for="ID"></label> <!--'MenuID' was 'CheeseID'-->
@@ -8,7 +10,7 @@
 <span asp-validation-for="ID"></span>
 </div>
 
-<input type="hidden" name="CategoryID" value="ATModel.Category.ID" />
+<input type="hidden" name="CategoryID" value="@Model.Category.ID" />
 
 <input type="submit" value="Add Item" />
 

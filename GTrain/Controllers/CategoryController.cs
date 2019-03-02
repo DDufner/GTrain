@@ -43,7 +43,7 @@ namespace GTrain.Controllers
                 Category newCategory = new Category
                 {
                     Name = addCategoryViewModel.Name,
-                    ID = addCategoryViewModel.ID
+                   // ID = addCategoryViewModel.ID
                     
                 };
 
@@ -54,16 +54,12 @@ namespace GTrain.Controllers
                 
             return View(addCategoryViewModel);
         }
-//line 60-64 hits an SQL exception, "Invaild column name 'ID'"
+//FIXED: line 60-64 hits an SQL exception, "Invaild column name 'ID'"
 //TopicCategory columns are:
         //CategoryID
+        //ID-this is not in CheeseMVC
         //TopicID
-        //CategoryTopicID
-        //CategoryID1
 
-     //Cheese equivelent topics are
-        //MenuID 
-        //CheeseID
         public IActionResult ViewCategory (int id, ViewCategoryViewModel viewCategoryViewModel)
             {
             List<TopicCategory> items = context
@@ -90,21 +86,22 @@ namespace GTrain.Controllers
         {   
             if (ModelState.IsValid)
             {
-                var ID = addCategoryItemViewModel.ID;
-                var categoryID = addCategoryItemViewModel.Category;
-
+                var TopicID = addCategoryItemViewModel.ID;
+                var categoryID = addCategoryItemViewModel.CategoryID;
+//FIXED: 2/28/19, lines 96-98 throw NullReferenceException 'object reference not set to an instance of an object'
                 IList<TopicCategory> existingItems = context.TopicCategories
-                   .Where(cm => cm.ID == ID)
-                   .Where(cm => cm.Category == categoryID).ToList();
+                   .Where(tc => tc.ID == TopicID)
+                   .Where(tc => tc.CategoryID == categoryID).ToList();
                 ;
                 if (existingItems.Count == 0)
                 {
                     TopicCategory categoryItem = new TopicCategory
                     {
-                        Topic = context.Topics.Single(t => t.ID == ID),
-                        Category = context.Categories.Single(c => c.ID == ID)  //was(c => c.ID == categoryID)
+                        Topic = context.Topics.Single(t => t.ID == TopicID),
+                        Category = context.Categories.Single(c => c.ID == categoryID)  //was(c => c.ID == categoryID)
                     };
                     context.TopicCategories.Add(categoryItem);
+//2/28/19 Inner Exception "Violation of primary key retstraint" error on line 105
                     context.SaveChanges();
 
                 };

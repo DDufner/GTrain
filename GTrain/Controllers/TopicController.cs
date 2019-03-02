@@ -22,18 +22,13 @@ namespace GTrain.Controllers
         public IActionResult Index()
         {
 
-            List<Topic> topics = context.Topics.ToList();
-            ViewBag.topics = context.Topics.ToList();
+            IList<Topic> topics = context.Topics.ToList();
+            //ViewBag.topics = context.Topics.ToList();
             //IList<Topic> topics = context.Topics.Include(context => c.Category).ToList(); //WARNING: check if catetory 
 
             return View(topics);
         }
 
-
-        public IActionResult Test()
-        {
-            return View();
-        }
         
         public IActionResult Add()
         {
@@ -47,11 +42,12 @@ namespace GTrain.Controllers
         {
             if (ModelState.IsValid)
             {
+
                 Topic newTopic = new Topic                
                 {
                     Name = addTopicViewModel.Name,
                     Description = addTopicViewModel.Description,
-                    ID = addTopicViewModel.ID
+                    //ID = addTopicViewModel.ID
                 };
                 context.Topics.Add(newTopic);
                 context.SaveChanges();
