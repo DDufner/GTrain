@@ -10,10 +10,10 @@ namespace GTrain.ViewModels
     public class LoginViewModel
     {
         [Required ]
-        public string UserName { get; set; }
-        public string Email { get; set; }
-        
+        //public string UserName { get; set; }
+        public string UserEmail { get; set; }
         [Required, MinLength(5), MaxLength(50), DataType (DataType.Password)]
+        public int LoginID { get; set; }
         public string Password { get; set; }
         [Required, MinLength(5), MaxLength(50), DataType(DataType.Password)]
         [Compare("Password") ]

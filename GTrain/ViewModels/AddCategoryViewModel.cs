@@ -11,6 +11,5 @@ namespace GTrain.ViewModels
         [Required]
         [Display(Name = "Category Title")]
         public string Name { get; set; }
-        //public int ID { get; set; }
     }
 }

@@ -23,7 +23,7 @@ namespace GTrain.Controllers
         {
 
             IList<Topic> topics = context.Topics.ToList();
-            //ViewBag.topics = context.Topics.ToList();
+            ViewBag.topics = context.Topics.ToList();
             //IList<Topic> topics = context.Topics.Include(context => c.Category).ToList(); //WARNING: check if catetory 
 
             return View(topics);
@@ -76,6 +76,14 @@ namespace GTrain.Controllers
             context.SaveChanges();
 
             return Redirect("/");
+        }
+
+        public IActionResult Edit (int ID)
+        {
+            IList<Topic> topics = context.Topics.ToList();
+            var topic = topics.Where(t => t.ID == ID).FirstOrDefault();
+
+            return View(topic);
         }
     }
 }

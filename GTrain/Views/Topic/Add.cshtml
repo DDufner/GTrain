@@ -15,13 +15,13 @@
         <input class="col-sm-4" asp-for="Name" />
         <span asp-validation-for="Name"></span>
     </div>
-    <div class="form-group" >
-        <b><label asp-for="Description"></label></b>
-        <input class="col-lg-4" asp-for="Description"/>
-        <span asp-validation-for="Description"></span>
+    <div class="form-group">
+        @Html.TextArea("Description", null, new { @class = "form-control" })
+        <!-- <b><label asp-for="Description"></label></b>
+     <input class="col-lg-4" asp-for="Description"/>
+     <span asp-validation-for="Description"></span>-->
     </div>
 
-    <!--above categoreis not displaying correclty-->
     <input type="submit" value="Add Topic" />
 
 </form>

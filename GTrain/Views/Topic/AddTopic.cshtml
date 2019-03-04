@@ -7,9 +7,9 @@
 <form asp-controller="Category" asp-action="AddTopic" method="post">
 
     <div class="form-group">
-        <label asp-for="ID"></label> <!--'MenuID' was 'CheeseID' -->
-        <select asp-for="ID" asp-items="Model.Topics"></select>
-        <span asp-validation-for="ID"></span>
+        <label asp-for="TopicID"></label> <!--'MenuID' was 'CheeseID' -->
+        <select asp-for="TopicID" asp-items="Model.Topics"></select>
+        <span asp-validation-for="TopicID"></span>
     </div>
 
     <input type="hidden" name="CategoryID" value="@Model.Category.ID" />
